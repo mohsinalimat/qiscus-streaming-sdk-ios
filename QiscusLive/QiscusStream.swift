@@ -23,7 +23,7 @@ public class QiscusStream: NSObject {
         get{
             let podBundle   = Bundle(for: QiscusStream.self)
             
-            if let bundleURL = podBundle.url(forResource: "QiscusStreaming", withExtension: "bundle") {
+            if let bundleURL = podBundle.url(forResource: "QiscusLive", withExtension: "bundle") {
                 return Bundle(url: bundleURL)!
             }else{
                 return podBundle

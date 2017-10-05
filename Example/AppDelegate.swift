@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import QiscusLive
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

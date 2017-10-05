@@ -1,6 +1,8 @@
 PODS:
   - Alamofire (4.5.1)
-  - QiscusLive (0.0.1)
+  - LFLiveKit (2.6)
+  - QiscusLive (0.0.1):
+    - LFLiveKit
 
 DEPENDENCIES:
   - Alamofire
@@ -12,8 +14,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  QiscusLive: 9ea94afae8f91d9408c744f48518299e6e9d202d
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
+  QiscusLive: 9b5ecfaa93bdee4b64769281a35c6438416ae605
 
 PODFILE CHECKSUM: 708a054ef8dc47ccc4fc5a6795a29fea01dfc7c7
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.2.0

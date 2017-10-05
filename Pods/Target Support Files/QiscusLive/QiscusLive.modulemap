@@ -1,0 +1,6 @@
+framework module QiscusLive {
+  umbrella header "QiscusLive-umbrella.h"
+
+  export *
+  module * { export * }
+}
