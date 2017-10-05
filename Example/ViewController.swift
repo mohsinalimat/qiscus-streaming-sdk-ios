@@ -11,12 +11,10 @@ import QiscusLive
 
 class ViewController: UIViewController {
 
-    var client : QiscusStream = QiscusStream()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let config = StreamConfig.init(AppId: "Qiscus")
-        self.client.setup(config: config)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +22,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func tapSample(_ sender: Any) {
+        let setup = StreamConfig.init(AppId: "Qiscus")
+        let client = QiscusLive()
         client.getStreamVC { (target, error) in
-            self.navigationController?.pushViewController(target, animated: true)
+            self.navigationController?.present(target, animated: true, completion: nil) 
         }
     }
 }
