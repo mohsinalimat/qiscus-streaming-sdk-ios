@@ -10,9 +10,11 @@ import UIKit
 
 public class StreamConfig : NSObject {
     public var AppId    : String
+    public var baseURL  : String
     
-    public init(AppId : String) {
-        self.AppId  = AppId
+    public init(AppId : String, url : String) {
+        self.AppId      = AppId
+        self.baseURL    = url
     }
 }
 

@@ -8,7 +8,7 @@ target 'Example' do
   # Pods for Example
   pod 'Alamofire'
   pod 'QiscusLive', :path => '.'
-  
+
 end
 
 target 'QiscusLive' do

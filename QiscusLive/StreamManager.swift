@@ -10,7 +10,7 @@ import UIKit
 import LFLiveKit
 
 class StreamManager: NSObject {
-    var config : StreamConfig? = nil
+    var config : StreamConfig!
     static var shared = StreamManager()
 
     //MARK: - Getters and Setters

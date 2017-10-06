@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0485D7631F86276100B73CC8 /* QiscusLive.h in Headers */ = {isa = PBXBuildFile; fileRef = 0485D7611F86276100B73CC8 /* QiscusLive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0485D7701F86277800B73CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485D76F1F86277800B73CC8 /* AppDelegate.swift */; };
 		0485D7721F86277800B73CC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485D7711F86277800B73CC8 /* ViewController.swift */; };
 		0485D7751F86277800B73CC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0485D7731F86277800B73CC8 /* Main.storyboard */; };
@@ -18,9 +17,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041B33D81F87421F006D4A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		041B33DA1F87421F006D4A61 /* StreamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamVC.swift; sourceTree = "<group>"; };
+		041B33DB1F87421F006D4A61 /* StreamVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamVC.xib; sourceTree = "<group>"; };
+		041B33DC1F87421F006D4A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041B33DD1F87421F006D4A61 /* QiscusLive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiscusLive.h; sourceTree = "<group>"; };
+		041B33DE1F87421F006D4A61 /* QiscusLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiscusLive.swift; sourceTree = "<group>"; };
+		041B33DF1F87421F006D4A61 /* StreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamManager.swift; sourceTree = "<group>"; };
 		0485D75E1F86276100B73CC8 /* QiscusLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QiscusLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0485D7611F86276100B73CC8 /* QiscusLive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiscusLive.h; sourceTree = "<group>"; };
-		0485D7621F86276100B73CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0485D76D1F86277800B73CC8 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0485D76F1F86277800B73CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0485D7711F86277800B73CC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,11 +61,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041B33D71F87421F006D4A61 /* QiscusLive */ = {
+			isa = PBXGroup;
+			children = (
+				041B33D81F87421F006D4A61 /* Assets.xcassets */,
+				041B33D91F87421F006D4A61 /* Controllers */,
+				041B33DC1F87421F006D4A61 /* Info.plist */,
+				041B33DD1F87421F006D4A61 /* QiscusLive.h */,
+				041B33DE1F87421F006D4A61 /* QiscusLive.swift */,
+				041B33DF1F87421F006D4A61 /* StreamManager.swift */,
+			);
+			path = QiscusLive;
+			sourceTree = "<group>";
+		};
+		041B33D91F87421F006D4A61 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				041B33DA1F87421F006D4A61 /* StreamVC.swift */,
+				041B33DB1F87421F006D4A61 /* StreamVC.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		0485D7541F86276000B73CC8 = {
 			isa = PBXGroup;
 			children = (
 				0485D77F1F862AA900B73CC8 /* QiscusLive.podspec */,
-				0485D7601F86276100B73CC8 /* QiscusLive */,
+				041B33D71F87421F006D4A61 /* QiscusLive */,
 				0485D76E1F86277800B73CC8 /* Example */,
 				0485D75F1F86276100B73CC8 /* Products */,
 				8D49C75023BE541CEF3B6570 /* Pods */,
@@ -76,15 +102,6 @@
 				0485D76D1F86277800B73CC8 /* Example.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0485D7601F86276100B73CC8 /* QiscusLive */ = {
-			isa = PBXGroup;
-			children = (
-				0485D7611F86276100B73CC8 /* QiscusLive.h */,
-				0485D7621F86276100B73CC8 /* Info.plist */,
-			);
-			path = QiscusLive;
 			sourceTree = "<group>";
 		};
 		0485D76E1F86277800B73CC8 /* Example */ = {
@@ -127,7 +144,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0485D7631F86276100B73CC8 /* QiscusLive.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +314,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/QiscusLive/QiscusLive.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/QiscusLive/QiscusLive.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

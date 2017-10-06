@@ -49,14 +49,14 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     // Close
     var closeButton: UIButton = {
         let closeButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 10 - 44, y: 20, width: 44, height: 44))
-        closeButton.setImage(UIImage(named: "close_preview"), for: UIControlState())
+        closeButton.setImage(UIImage(named: "close_preview", in: QiscusLive.bundle, compatibleWith: nil), for: UIControlState())
         return closeButton
     }()
     
     // Camera
     var cameraButton: UIButton = {
         let cameraButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 54 * 2, y: 20, width: 44, height: 44))
-        cameraButton.setImage(UIImage(named: "camra_preview"), for: UIControlState())
+        cameraButton.setImage(UIImage(named: "camera_preview", in: QiscusLive.bundle, compatibleWith: nil), for: UIControlState())
         return cameraButton
     }()
     
@@ -158,26 +158,26 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     }
     
     func liveSession(_ session: LFLiveSession?, liveStateDidChange state: LFLiveState) {
-    print("liveStateDidChange: \(state.rawValue)")
-    switch state {
-    case LFLiveState.ready:
-    stateLabel.text = "Offline"
-    break;
-    case LFLiveState.pending:
-    stateLabel.text = "Pending"
-    break;
-    case LFLiveState.start:
-    stateLabel.text = "Live"
-    break;
-    case LFLiveState.error:
-    stateLabel.text = "Error"
-    break;
-    case LFLiveState.stop:
-    stateLabel.text = "Offline"
-    break;
-    default:
-    break;
-    }
+        print("liveStateDidChange: \(state.rawValue)")
+        switch state {
+        case LFLiveState.ready:
+            stateLabel.text = "Offline"
+            break;
+        case LFLiveState.pending:
+            stateLabel.text = "Pending"
+            break;
+        case LFLiveState.start:
+            stateLabel.text = "Live"
+            break;
+        case LFLiveState.error:
+            stateLabel.text = "Error"
+            break;
+        case LFLiveState.stop:
+            stateLabel.text = "Offline"
+            break;
+        default:
+            break;
+        }
     }
     
     //MARK: - Events
@@ -206,6 +206,6 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     }
     
     func didTappedCloseButton(_ button: UIButton) -> Void  {
-    
+        self.dismiss(animated: true, completion: nil)
     }
 }
