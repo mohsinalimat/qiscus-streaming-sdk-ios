@@ -20,4 +20,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.dependency 'LFLiveKit'
+  s.dependency 'Alamofire'
+  s.dependency 'SwiftyJSON'
 end

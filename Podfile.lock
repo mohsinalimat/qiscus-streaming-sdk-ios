@@ -2,7 +2,10 @@ PODS:
   - Alamofire (4.5.1)
   - LFLiveKit (2.6)
   - QiscusLive (0.0.1):
+    - Alamofire
     - LFLiveKit
+    - SwiftyJSON
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -15,8 +18,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
-  QiscusLive: 9b5ecfaa93bdee4b64769281a35c6438416ae605
+  QiscusLive: 6d2593e41bfa901cb46d65103159618ffdfc9606
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
 PODFILE CHECKSUM: 708a054ef8dc47ccc4fc5a6795a29fea01dfc7c7
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.3.1

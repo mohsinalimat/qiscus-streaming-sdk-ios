@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func tapSample(_ sender: Any) {
-        let setup = StreamConfig.init(AppId: "Qiscus")
+        _ = StreamConfig.init(AppId: "Qiscus")
         let client = QiscusLive()
         client.getStreamVC { (target, error) in
             self.navigationController?.present(target, animated: true, completion: nil) 
