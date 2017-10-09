@@ -139,6 +139,7 @@ var client : QiscusStreaming?
 You can test live streaming using VLC(https://www.videolan.org/vlc/). 
 Open Vlc, file, open network and put stream url after call method QiscusStream.createStream
 
+<p align="center"><br/><img src="https://d1edrlpyc25xu0.cloudfront.net/kiwari-prod/image/upload/_ngkAgxn38/1507543773-Screen+Shot+2017-10-09+at+5.08.35+PM.png" width="45%" /><br/></p>
 
 ### Example
 
