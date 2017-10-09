@@ -31,6 +31,12 @@ end
 Add to your project Info.plist
 
 ```plist
+<key>LSRequiresIPhoneOS</key>
+<true/>
+<key>NSCameraUsageDescription</key>
+<string>..</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>..</string>
 ```
 
 # Authentication
