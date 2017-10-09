@@ -15,6 +15,12 @@ var BASE_URL : String {
     }
 }
 
+var APPID : String {
+    get {
+        return StreamManager.shared.config.AppId
+    }
+}
+
 class StreamEndpoint {
     
     static var request = BASE_URL + "/stream/create"
@@ -22,13 +28,19 @@ class StreamEndpoint {
 
 class StreamService: NSObject {
     
-    class func StartStreaming(title : String, tags : [String], completion: @escaping (Stream?)->()) {
-        let params : [String : Any] = [
-            "title" : title,
-            "tags"  : tags
+    class func createStreaming(title : String, tags : [String], completion: @escaping (Stream?)->()) {
+        
+        let headers : HTTPHeaders = [
+            "Authorization" : "Bearer \(APPID)"
         ]
         
-        Alamofire.request(StreamEndpoint.request, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+        let parameter : [String : Any] = [
+            "title" : title
+        ]
+        print("params \(parameter), \(headers)")
+        
+        Alamofire.request(StreamEndpoint.request, method: .post, parameters: parameter, headers: headers).responseJSON { (response)->Void in
+            print(response)
             if response.result.value != nil {
                 if (response.response?.statusCode)! >= 300 {
                     completion(nil)

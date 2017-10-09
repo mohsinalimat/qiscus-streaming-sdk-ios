@@ -32,8 +32,20 @@ class StreamManager: NSObject {
         session.stopLive()
     }
     
-    func streamView(completionHandler: @escaping (UIViewController, NSError?) -> Void) {
-        let target = StreamVC()
+    func streamView(streamUrl url: String, completionHandler: @escaping (UIViewController, NSError?) -> Void) {
+        let target          = StreamVC()
+        target.streamUrl    = url
         completionHandler(target, nil)
+    }
+    
+    func createStream(title: String, tags: [String], completion: @escaping (String) -> Void) {
+        // Request URL
+        StreamService.createStreaming(title: title, tags: tags) { (result) in
+            if result != nil {
+                completion((result?.streamUrl)!)
+            }else {
+                completion("")
+            }
+        }
     }
 }

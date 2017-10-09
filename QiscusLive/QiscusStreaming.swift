@@ -8,22 +8,12 @@
 
 import UIKit
 
-public class StreamConfig : NSObject {
-    public var AppId    : String
-    public var baseURL  : String
-    
-    public init(AppId : String, url : String) {
-        self.AppId      = AppId
-        self.baseURL    = url
-    }
-}
-
-public class QiscusLive: NSObject {
+public class QiscusStreaming: NSObject {
     var manager = StreamManager.shared
     
     class var bundle:Bundle{
         get{
-            let podBundle   = Bundle(for: QiscusLive.self)
+            let podBundle   = Bundle(for: QiscusStreaming.self)
             
             if let bundleURL = podBundle.url(forResource: "QiscusLive", withExtension: "bundle") {
                 return Bundle(url: bundleURL)!
@@ -33,8 +23,8 @@ public class QiscusLive: NSObject {
         }
     }
     
-    public override init() {
-        
+    public init(withConfig config: StreamConfig) {
+        manager.config    = config
     }
     
     /**
@@ -43,10 +33,20 @@ public class QiscusLive: NSObject {
      - returns : Callback chat view controller and error if exist
      
      */
-    public func getStreamVC(completionHandler: @escaping (UIViewController, NSError?) -> Void) {
-        self.manager.streamView() { (target, error) in
+    public func buildStream(streamUrl url: String, completionHandler: @escaping (UIViewController, NSError?) -> Void) {
+        self.manager.streamView(streamUrl: url) { (target, error) in
             completionHandler(target, error)
         }
+    }
+    
+    /**
+     Get Stream URL.
+     
+     - returns : Callback stream url
+     
+     */
+    public func createStream(title: String, tags: [String], completion: @escaping (String) -> Void) {
+        self.manager.createStream(title: title, tags: tags, completion: completion)
     }
     
 }

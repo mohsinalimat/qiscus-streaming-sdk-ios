@@ -7,7 +7,7 @@ target 'Example' do
 
   # Pods for Example
   pod 'Alamofire'
-  pod 'QiscusLive', :path => '.'
+  pod 'QiscusStreaming', :path => '.'
 
 end
 

@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "QiscusLive"
+  s.name         = "QiscusStreaming"
   s.version      = "0.0.1"
   s.summary      = "Qiscus Video Streaming."
   s.homepage     = "https:qiscus.com"

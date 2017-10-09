@@ -18,22 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-yf-XnF">
-                                <rect key="frame" x="117" y="310" width="141" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-yf-XnF">
+                                <rect key="frame" x="112.5" y="318.5" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.81960784310000001" green="0.26274509800000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6P5-ro-4H0"/>
+                                </constraints>
                                 <state key="normal" title="Sample Stream">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="tapSample:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2X-uD-dVi"/>
-                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-ia-OhM">
+                                <rect key="frame" x="20" y="272" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPy-QF-O0P">
+                                <rect key="frame" x="112" y="363.5" width="150.5" height="30"/>
+                                <state key="normal" title="Let's Stream">
+                                    <color key="titleColor" red="0.81960784310000001" green="0.26274509800000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8nw-ia-OhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3yj-VO-38E"/>
+                            <constraint firstItem="z6f-yf-XnF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6PI-EM-v3R"/>
+                            <constraint firstItem="z6f-yf-XnF" firstAttribute="top" secondItem="8nw-ia-OhM" secondAttribute="bottom" constant="16.5" id="MT5-b0-tFE"/>
+                            <constraint firstItem="KPy-QF-O0P" firstAttribute="leading" secondItem="z6f-yf-XnF" secondAttribute="leading" id="QeU-Bx-blD"/>
+                            <constraint firstItem="KPy-QF-O0P" firstAttribute="trailing" secondItem="z6f-yf-XnF" secondAttribute="trailing" id="XKp-jA-ziA"/>
+                            <constraint firstItem="KPy-QF-O0P" firstAttribute="top" secondItem="z6f-yf-XnF" secondAttribute="bottom" constant="15" id="blc-KW-8Gc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8nw-ia-OhM" secondAttribute="trailing" constant="20" id="mKb-FM-Jmb"/>
+                            <constraint firstItem="z6f-yf-XnF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q9S-fN-x8b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="tBl-1C-a4d"/>
+                    <connections>
+                        <outlet property="buttonLive" destination="KPy-QF-O0P" id="SWB-8Z-Dbs"/>
+                        <outlet property="buttonStream" destination="z6f-yf-XnF" id="NLN-Ov-jCm"/>
+                        <outlet property="urlTextField" destination="8nw-ia-OhM" id="g7F-xo-LGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

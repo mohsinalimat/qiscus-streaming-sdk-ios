@@ -11,7 +11,7 @@ import LFLiveKit
 class StreamVC: UIViewController, LFLiveSessionDelegate {
 
     public init() {
-        super.init(nibName: "StreamVC", bundle: QiscusLive.bundle)
+        super.init(nibName: "StreamVC", bundle: QiscusStreaming.bundle)
         self.hidesBottomBarWhenPushed = true
     }
     
@@ -20,6 +20,8 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     }
     
     //MARK: - Getters and Setters
+    
+    var streamUrl : String = ""
     
     //  Resolusi default audio 368 * 640: 44,1 iphone6 di atas 48 layar vertikal dual-channel
     var session: LFLiveSession = {
@@ -49,14 +51,14 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     // Close
     var closeButton: UIButton = {
         let closeButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 10 - 44, y: 20, width: 44, height: 44))
-        closeButton.setImage(UIImage(named: "close_preview", in: QiscusLive.bundle, compatibleWith: nil), for: UIControlState())
+        closeButton.setImage(UIImage(named: "close_preview", in: QiscusStreaming.bundle, compatibleWith: nil), for: UIControlState())
         return closeButton
     }()
     
     // Camera
     var cameraButton: UIButton = {
         let cameraButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - 54 * 2, y: 20, width: 44, height: 44))
-        cameraButton.setImage(UIImage(named: "camera_preview", in: QiscusLive.bundle, compatibleWith: nil), for: UIControlState())
+        cameraButton.setImage(UIImage(named: "camera_preview", in: QiscusStreaming.bundle, compatibleWith: nil), for: UIControlState())
         return cameraButton
     }()
     
@@ -187,7 +189,7 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         if (startLiveButton.isSelected) {
             startLiveButton.setTitle("Live", for: UIControlState())
             let stream = LFLiveStreamInfo()
-            stream.url = "rtmp://rtmp.qiscus.com/cempaka/QxdM6pWgAR?token=ea20i49Dtk"
+            stream.url = streamUrl
             session.startLive(stream)
         } else {
             startLiveButton.setTitle("Stop", for: UIControlState())

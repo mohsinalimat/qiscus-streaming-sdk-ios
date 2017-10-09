@@ -32,7 +32,7 @@
 		0485D7761F86277800B73CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0485D7791F86277800B73CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0485D77B1F86277800B73CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0485D77F1F862AA900B73CC8 /* QiscusLive.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = QiscusLive.podspec; sourceTree = "<group>"; };
+		0485D77F1F862AA900B73CC8 /* QiscusStreaming.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = QiscusStreaming.podspec; sourceTree = "<group>"; };
 		37A5DB3069F3857425B85569 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FA7BAAE959CF4FE38D972D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		553A3767BE2059C7ADD85415 /* Pods_QiscusLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiscusLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +86,7 @@
 		0485D7541F86276000B73CC8 = {
 			isa = PBXGroup;
 			children = (
-				0485D77F1F862AA900B73CC8 /* QiscusLive.podspec */,
+				0485D77F1F862AA900B73CC8 /* QiscusStreaming.podspec */,
 				041B33D71F87421F006D4A61 /* QiscusLive */,
 				0485D76E1F86277800B73CC8 /* Example */,
 				0485D75F1F86276100B73CC8 /* Products */,
@@ -516,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live.QiscusLive;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -538,7 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live.QiscusLive;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

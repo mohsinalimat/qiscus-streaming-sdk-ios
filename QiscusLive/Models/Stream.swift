@@ -26,16 +26,30 @@ import SwiftyJSON
  }
 */
 
+open class StreamConfig : NSObject {
+    public var AppId    : String = ""
+    public var baseURL  : String = "http://rtmp-api.qiscus.com"
+    
+    public override init(){
+        super.init()
+    }
+}
+
 class Stream: NSObject {
     var title       : String    = ""
     var name        : String    = ""
     var token       : String    = ""
-    var stream_url  : String    = ""
-    var play_url    : String    = ""
-    var hls_url     : String    = ""
+    var streamUrl   : String    = ""
+    var watchUrl    : String    = ""
+    var playUrl     : String    = ""
+    var hlsUrl      : String    = ""
     var tags        : [String]  = [String]()
     
-    init(withJSON : JSON) {
-        
+    init(withJSON data: JSON) {
+        self.title      = data["title"].stringValue
+        self.streamUrl  = data["stream_url"].stringValue
+        self.playUrl    = data["play_url"].stringValue
+        self.watchUrl   = data["watch_url"].stringValue
+        self.name       = data["name"].stringValue
     }
 }
