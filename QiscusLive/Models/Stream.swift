@@ -17,12 +17,12 @@ open class StreamConfig : NSObject {
     }
 }
 
-class Stream: NSObject {
+public class Stream: NSObject {
     var title       : String    = ""
     var name        : String    = ""
     var token       : String    = ""
-    var streamUrl   : String    = ""
-    var watchUrl    : String    = ""
+    public var streamUrl   : String    = ""
+    public var watchUrl    : String    = ""
     var playUrl     : String    = ""
     var hlsUrl      : String    = ""
     var tags        : [String]  = [String]()
