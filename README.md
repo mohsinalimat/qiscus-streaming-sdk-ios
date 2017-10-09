@@ -1,8 +1,8 @@
 # Qiscus Streaming SDK IOS
 
-[![Platform](https://img.shields.io/cocoapods/p/QiscusStreaming.svg?style=flat)](http://cocoapods.org/pods/QiscusStreaming)
-![Language](https://img.shields.io/badge/language-Swift%203.2-orange.svg)
-[![CocoaPods](https://img.shields.io/cocoapods/v/QiscusStreaming.svg?style=flat)](http://cocoapods.org/pods/QiscusStreaming)
+[![Platform](https://img.shields.io/cocoapods/p/QiscusStreaming.svg?style=flat)](http://cocoapods.org/pods/QiscusStreaming) 
+![Language](https://img.shields.io/badge/language-Swift%203.2-orange.svg) 
+[![CocoaPods](https://img.shields.io/cocoapods/v/QiscusStreaming.svg?style=flat)](http://cocoapods.org/pods/QiscusStreaming) 
 
 Qiscus Streaming SDK is a product that makes adding voice calling and/or instant messaging to mobile apps easy. It handles all the complexity of signaling and audio management while providing you the freedom to create a stunning user interface.
 
