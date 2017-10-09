@@ -39,7 +39,7 @@ Add to your project Info.plist
 
 Init Qiscus at your application class with your API key
 
-#### `QiscusStreaming(withConfig: config)`
+`QiscusStreaming(withConfig: config)`
 
 Parameters:
 * config: StreamConfig
@@ -59,7 +59,7 @@ Above is our demo API key with limited feature. To get your API key with full fe
 
 Before user can start streaming each other, they must create link streaming
 
-#### `QiscusStreaming.createStream(title: String, tags: [String], completion: @escaping (Stream?) -> Void)`
+`QiscusStreaming.createStream(title: String, tags: [String], completion: @escaping (Stream?) -> Void)`
 
 Parameters:
 * title : String
@@ -129,6 +129,11 @@ var client : QiscusStreaming?
         })
     }
 ```
+
+You can test live streaming using VLC(https://www.videolan.org/vlc/). 
+Open Vlc, file, open network and put stream url after call method QiscusStream.createStream
+
+
 ### Example
 
 - [Basic example]
