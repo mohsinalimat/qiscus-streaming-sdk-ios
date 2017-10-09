@@ -39,19 +39,18 @@ Add to your project Info.plist
 
 Init Qiscus at your application class with your API key
 
-#### `QiscusStreaming.init(this, api_key);`
+#### `QiscusStreaming(withConfig: config)`
 
 Parameters:
-* api_key: String
+* config: StreamConfig
 
 ```Swift
-public class SampleApplication extends Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        QiscusStreaming.init(this, api_key);
-    }
-}
+import QiscusStreaming
+
+let config      = StreamConfig()
+config.AppId    = "Your_app_id"
+client = QiscusStreaming(withConfig: config)
+
 ```
 
 Above is our demo API key with limited feature. To get your API key with full features, please [contact us](https://www.qiscus.com/contactus).
@@ -63,33 +62,15 @@ Before user can start streaming each other, they must create link streaming
 #### `QiscusStreaming.createStream(stream_title, tags, callback);`
 
 Parameters:
-* stream_title: String
-* tags: JSON object
-* callback: CreateStreamListener()
+* title : String
+* tags  : [String]
+* completion: @escaping (String) -> Void
 
-```java
-QiscusStreaming.createStream(stream_title, tags, new CreateStreamListener() {
-    @Override
-    public void onCreateStreamSuccess(final QiscusStream stream) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                // It returns stream object that contains URL to publish your stream.
-                // See explanation below to get detail about stream object.
-            }
-        });
-    }
-
-    @Override
-    public void onCreateStreamError(final String error) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(context, "Create stream error: " + error, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-});
+```Swift
+var client : QiscusStream?
+client?.createStream(title: "streaming", tags: ["test"]) { (streamUrl) in
+            print("stream url : \(streamUrl)")
+}
 ```
 
 Stream object:
