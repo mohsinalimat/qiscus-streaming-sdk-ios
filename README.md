@@ -44,7 +44,7 @@ Init Qiscus at your application class with your API key
 Parameters:
 * config: StreamConfig
 
-```Swift
+```swift
 import QiscusStreaming
 
 let config      = StreamConfig()
@@ -59,17 +59,20 @@ Above is our demo API key with limited feature. To get your API key with full fe
 
 Before user can start streaming each other, they must create link streaming
 
-#### `QiscusStreaming.createStream(stream_title, tags, callback);`
+#### `QiscusStreaming.createStream(title: String, tags: [String], completion: @escaping (Stream?) -> Void)`
 
 Parameters:
 * title : String
 * tags  : [String]
 * completion: @escaping (String) -> Void
 
-```Swift
-var client : QiscusStream?
-client?.createStream(title: "streaming", tags: ["test"]) { (streamUrl) in
-            print("stream url : \(streamUrl)")
+```swift
+let config      = StreamConfig()
+config.AppId    = "Your_app_id"
+client = QiscusStreaming(withConfig: config)
+
+client?.createStream(title: "streaming", tags: ["test"]) { (stream) in
+    print("stream url : \(stream?.streamUrl)")
 }
 ```
 
@@ -81,47 +84,50 @@ Stream object:
 
 Start video streaming
 
-```java
-QiscusStreaming.buildStream(stream_url)
-                        .setVideoQuality(VideoQuality.QVGA)
-                        .start(getContext());
+```swift
+let config      = StreamConfig()
+config.AppId    = "Your_app_id"
+client = QiscusStreaming(withConfig: config)
+
+client?.buildStream(streamUrl: url!, completionHandler: { (target, error) in
+    self.present(target, animated: true, completion: nil)
+})
 ```
 
 You can obtain stream_url from stream object.
 
-Video quality:
-- VideoQuality.QVGA
-- VideoQuality.SD
-- VideoQuality.HD
-
 ### Implementation
 
-```java
-JSONObject tags = new JSONObject();
+```swift
+import QiscusStreaming
 
-QiscusStreaming.createStream("Stream Test", tags, new CreateStreamListener() {
-    @Override
-    public void onCreateStreamSuccess(final QiscusStream stream) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                QiscusStreaming.buildStream(stream.streamUrl)
-                                        .setVideoQuality(VideoQuality.QVGA)
-                                        .start(getContext());
-            }
-        });
+var client : QiscusStreaming?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        buttonStream.addTarget(self, action: #selector(self.tapSample(_:)), for: UIControlEvents.touchUpInside)
+        buttonLive.addTarget(self, action: #selector(self.goStream(_:)), for: UIControlEvents.touchUpInside)
+        let config      = StreamConfig()
+        config.AppId    = "a3d2QkJXQ2M1YTdrTW1PYnVJSmJiUVczTkxmS3BRc05nYnRCOHRGUw=="
+        client = QiscusStreaming(withConfig: config)
     }
 
-    @Override
-    public void onCreateStreamError(final String error) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(this, "Create stream error: " + error, Toast.LENGTH_SHORT).show();
-            }
-        });
+    func tapSample(_ sender: Any) {
+        client?.createStream(title: "streaming", tags: ["test"]) { (stream) in
+            print("stream url : \(stream?.streamUrl)")
+            self.urlTextField.text = stream?.streamUrl
+        }
     }
-});
+    
+    func goStream(_ sender: Any) {
+        //
+        let url = self.urlTextField.text
+        client?.buildStream(streamUrl: url!, completionHandler: { (target, error) in
+            //
+            self.present(target, animated: true, completion: nil)
+        })
+    }
 ```
 ### Example
 
