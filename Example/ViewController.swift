@@ -21,7 +21,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         buttonStream.addTarget(self, action: #selector(self.tapSample(_:)), for: UIControlEvents.touchUpInside)
         buttonLive.addTarget(self, action: #selector(self.goStream(_:)), for: UIControlEvents.touchUpInside)
-
+        let config      = StreamConfig()
+        config.AppId    = "a3d2QkJXQ2M1YTdrTW1PYnVJSmJiUVczTkxmS3BRc05nYnRCOHRGUw=="
+        client = QiscusStreaming(withConfig: config)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,12 +31,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func tapSample(_ sender: Any) {
-        let config      = StreamConfig()
-        config.AppId    = "a3d2QkJXQ2M1YTdrTW1PYnVJSmJiUVczTkxmS3BRc05nYnRCOHRGUw=="
-        //(AppId: "ea20i49Dtk")
-        let client = QiscusStreaming(withConfig: config)
-        
-        client.createStream(title: "streaming", tags: ["test"]) { (streamUrl) in
+        client?.createStream(title: "streaming", tags: ["test"]) { (streamUrl) in
             print("stream url : \(streamUrl)")
             self.urlTextField.text = streamUrl
         }

@@ -8,24 +8,6 @@
 import UIKit
 import SwiftyJSON
 
-/*
- {
- "status": "success",
- "data": {
- "title": "\"Qiscus\"",
- "name": "orwgE8XexL",
- "token": "5JdwxzMXPe",
- "stream_url": "rtmp://rtmp.qiscus.com/cempaka/orwgE8XexL?token=5JdwxzMXPe",
- "watch_url": "https://rtmp-api.qiscus.com/watch/stream/orwgE8XexL",
- "play_url": "rtmp://rtmp.qiscus.com/cempaka/orwgE8XexL",
- "hls_url": "https://rtmp.qiscus.com/live/cempaka/orwgE8XexL.m3u8",
- "tags": [
- "juang"
- ]
- }
- }
-*/
-
 open class StreamConfig : NSObject {
     public var AppId    : String = ""
     public var baseURL  : String = "http://rtmp-api.qiscus.com"

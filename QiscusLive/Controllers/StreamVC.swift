@@ -75,7 +75,7 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         let startLiveButton = UIButton(frame: CGRect(x: 30, y: UIScreen.main.bounds.height - 50, width: UIScreen.main.bounds.width - 10 - 44, height: 44))
         startLiveButton.layer.cornerRadius = 22
         startLiveButton.setTitleColor(UIColor.black, for:UIControlState())
-        startLiveButton.setTitle("Stream", for: UIControlState())
+        startLiveButton.setTitle("Live", for: UIControlState())
         startLiveButton.titleLabel!.font = UIFont.systemFont(ofSize: 14)
         startLiveButton.backgroundColor = UIColor(colorLiteralRed: 50, green: 32, blue: 245, alpha: 1)
         return startLiveButton
@@ -101,6 +101,7 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         cameraButton.addTarget(self, action: #selector(didTappedCameraButton(_:)), for:.touchUpInside)
         beautyButton.addTarget(self, action: #selector(didTappedBeautyButton(_:)), for: .touchUpInside)
         startLiveButton.addTarget(self, action: #selector(didTappedStartLiveButton(_:)), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(didTappedCloseButton(_:)), for: .touchUpInside)
     }
     
     override func didReceiveMemoryWarning() {
@@ -187,12 +188,12 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     func didTappedStartLiveButton(_ button: UIButton) -> Void {
         startLiveButton.isSelected = !startLiveButton.isSelected;
         if (startLiveButton.isSelected) {
-            startLiveButton.setTitle("Live", for: UIControlState())
+            startLiveButton.setTitle("Stop", for: UIControlState())
             let stream = LFLiveStreamInfo()
             stream.url = streamUrl
             session.startLive(stream)
         } else {
-            startLiveButton.setTitle("Stop", for: UIControlState())
+            startLiveButton.setTitle("Live", for: UIControlState())
             session.stopLive()
         }
     }
