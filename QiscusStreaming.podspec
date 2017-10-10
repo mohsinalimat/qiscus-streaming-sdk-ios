@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     DESC
 
   s.homepage     = "https://qisc.us"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = "MIT"
   s.author       = { "ashari juang" => "asharijuang@me.com" }
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = "9.0"
