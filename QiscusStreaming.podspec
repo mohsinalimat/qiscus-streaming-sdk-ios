@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.author       = { "ashari juang" => "asharijuang@me.com" }
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = "9.0"
+
   s.source       = { :git => "https://github.com/qiscus/qiscus-streaming-sdk-ios.git", :tag => "#{s.version}" }
 
   s.source_files  = "QiscusLive", "QiscusLive/**/*.{h,m,swift,xib}"
