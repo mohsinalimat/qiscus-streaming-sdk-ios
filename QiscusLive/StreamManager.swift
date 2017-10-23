@@ -21,13 +21,7 @@ class StreamManager: NSObject {
         return session!
     }()
     
-    //MARK: - Event
-    func startLive() -> Void {
-        let stream = LFLiveStreamInfo()
-        stream.url = "rtmp://rtmp.qiscus.com/cempaka/QxdM6pWgAR?token=l0hv1pokeq";
-        session.startLive(stream)
-    }
-    
+    //MARK: - Event    
     func stopLive() -> Void {
         session.stopLive()
     }

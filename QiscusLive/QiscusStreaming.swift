@@ -10,7 +10,7 @@ import UIKit
 
 public class QiscusStreaming: NSObject {
     var manager = StreamManager.shared
-    
+    public static var shared    = QiscusStreaming()
     class var bundle:Bundle{
         get{
             let podBundle   = Bundle(for: QiscusStreaming.self)
@@ -23,8 +23,18 @@ public class QiscusStreaming: NSObject {
         }
     }
     
+    public override init() {
+        super.init()
+    }
+    
     public init(withConfig config: StreamConfig) {
         manager.config    = config
+    }
+    
+    public func setup(WithAppId id: String) {
+        let config      = StreamConfig()
+        config.AppId    = id
+        self.manager.config = config
     }
     
     /**
