@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func tapSample(_ sender: Any) {
-        client?.createStream(title: "streaming", tags: ["test"]) { (stream) in
+        client?.createStream(title: "streaming", tags: ["test", "user: juang"]) { (stream) in
             print("stream url : \(stream?.streamUrl)")
             self.urlTextField.text = stream?.streamUrl
         }
