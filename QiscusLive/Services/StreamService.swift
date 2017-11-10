@@ -28,19 +28,19 @@ class StreamEndpoint {
 
 class StreamService: NSObject {
     
-    class func createStreaming(title : String, tags : [String], completion: @escaping (Stream?)->()) {
+    class func createStreaming(title : String, tags : String, completion: @escaping (Stream?)->()) {
         
         let headers : HTTPHeaders = [
             "Authorization" : "Bearer \(APPID)"
         ]
         
-        let parameter : [String : Any] = [
-            "title" : title,
-            "tags" : tags,
+        let params = [
+            "iostags" : "example : hello",
+            "title" : "title",
         ]
-        print("params \(parameter), \(headers)")
+        print("params \(params), \(headers)")
         
-        Alamofire.request(StreamEndpoint.request, method: .post, parameters: parameter, headers: headers).responseJSON { (response)->Void in
+        let request = Alamofire.request(StreamEndpoint.request, method: .post, parameters: params, headers: headers).responseJSON { (response)->Void in
             print(response)
             if response.result.value != nil {
                 if (response.response?.statusCode)! >= 300 {
@@ -55,5 +55,6 @@ class StreamService: NSObject {
                 completion(nil)
             }
         }
+        print("request \(request)")
     }
 }

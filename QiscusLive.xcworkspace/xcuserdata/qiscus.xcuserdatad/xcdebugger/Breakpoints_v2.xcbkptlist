@@ -9,24 +9,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QiscusLive/QiscusStreaming.swift"
-            timestampString = "530437866.516584"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "init(withConfig:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "QiscusLive/StreamManager.swift"
-            timestampString = "530430466.520371"
+            timestampString = "531997479.241042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -41,46 +25,62 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QiscusLive/StreamManager.swift"
-            timestampString = "530430466.53078"
+            filePath = "QiscusLive/Services/StreamService.swift"
+            timestampString = "531997479.241227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "createStream(title:tags:completion:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "createStreaming(title:tags:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QiscusStreaming.StreamManager.createStream(title: Swift.String, tags: Swift.Array&lt;Swift.String&gt;, completion: (Swift.Optional&lt;QiscusStreaming.Stream&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "QiscusStreaming"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qiscus/iOS/qiscus-streaming-sdk-ios/QiscusLive/StreamManager.swift"
-                  timestampString = "530437882.276004"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "41">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;QiscusStreaming.Stream&gt;) -&gt; () in QiscusStreaming.StreamManager.createStream(title: Swift.String, tags: Swift.Array&lt;Swift.String&gt;, completion: (Swift.Optional&lt;QiscusStreaming.Stream&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "QiscusStreaming"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qiscus/iOS/qiscus-streaming-sdk-ios/QiscusLive/StreamManager.swift"
-                  timestampString = "530437882.279308"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QiscusLive/Services/StreamService.swift"
+            timestampString = "531997479.241841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "createStreaming(title:tags:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QiscusLive/Services/StreamService.swift"
+            timestampString = "531997479.242259"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "createStreaming(title:tags:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QiscusLive/Services/StreamService.swift"
+            timestampString = "531997479.242665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "createStreaming(title:tags:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

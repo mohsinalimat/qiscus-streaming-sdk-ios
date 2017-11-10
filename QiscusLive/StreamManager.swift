@@ -32,7 +32,7 @@ class StreamManager: NSObject {
         completionHandler(target, nil)
     }
     
-    func createStream(title: String, tags: [String], completion: @escaping (Stream?) -> Void) {
+    func createStream(title: String, tags: String, completion: @escaping (Stream?) -> Void) {
         // Request URL
         StreamService.createStreaming(title: title, tags: tags) { (result) in
             if result != nil {
