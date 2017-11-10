@@ -36,7 +36,7 @@ class StreamService: NSObject {
         
         let parameter : [String : Any] = [
             "title" : title,
-            "tag" : tags,
+            "tags" : tags,
         ]
         print("params \(parameter), \(headers)")
         
