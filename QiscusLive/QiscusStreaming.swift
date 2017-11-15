@@ -55,7 +55,7 @@ public class QiscusStreaming: NSObject {
      - returns : Callback stream url
      
      */
-    public func createStream(title: String, tags: String, completion: @escaping (Stream?) -> Void) {
+    public func createStream(title: String, tags: [String:Any], completion: @escaping (Stream?) -> Void) {
         self.manager.createStream(title: title, tags: tags, completion: completion)
     }
     

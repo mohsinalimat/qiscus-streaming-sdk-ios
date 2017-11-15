@@ -29,13 +29,20 @@ class HttpClientApi: NSObject{
     
     
     
-    func makeAPICall(url: String,params: Dictionary<String, Any>?, method: HttpMethod, headers: [String : String]? = nil, success:@escaping ( Data? ,HTTPURLResponse?  , NSError? ) -> Void, failure: @escaping ( Data? ,HTTPURLResponse?  , NSError? )-> Void) {
+    func makeAPICall(url: String,params: [String:Any]?, method: HttpMethod, headers: [String : String]? = nil, success:@escaping ( Data? ,HTTPURLResponse?  , NSError? ) -> Void, failure: @escaping ( Data? ,HTTPURLResponse?  , NSError? )-> Void) {
         request = URLRequest(url: URL(string: url)!)
         print("URL = \(url)")
+        
         if let params = params {
-            let  jsonData = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-            request?.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request?.httpBody = jsonData//?.base64EncodedData()
+            request?.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            do {
+                let data = try JSONSerialization.data(withJSONObject: params, options: [])
+                print("params: \(params)")
+                request?.httpBody = data
+            } catch {
+                failure(nil,nil,nil)
+                return
+            }
             if headers != nil {
                 request?.allHTTPHeaderFields = headers
             }
@@ -51,6 +58,7 @@ class HttpClientApi: NSObject{
             if let response = response as? HTTPURLResponse, 200...299 ~= response.statusCode {
                 success(data , response , error as? NSError)
             } else {
+                print("response: \(response!)")
                 failure(data , response as? HTTPURLResponse, error as? NSError)
             }
         }else {

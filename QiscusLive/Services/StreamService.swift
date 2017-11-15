@@ -28,22 +28,34 @@ class StreamEndpoint {
 
 class StreamService: NSObject {
     
-    class func createStreaming(title : String, tags : String, completion: @escaping (Stream?)->()) {
+    class func createStreaming(title : String, tags : [String:Any], completion: @escaping (Stream?)->()) {
         
         var params  = [String : Any]()
-        params["tags"]  = tags
+        let tags = try! JSONSerialization.data(withJSONObject: tags, options: [])
+        let tagString = String(data: tags, encoding: .ascii)
+        params["tags"]  = tagString
         params["title"] = title
         
+        print("params: \(params)")
         var headers = [String : String]()
         headers["Authorization"] = "Bearer \(APPID)"
         HttpClientApi.instance().makeAPICall(url: StreamEndpoint.request, params: params, method: HttpMethod.POST, headers: headers, success: { (data, response, error) in
             if error != nil {
                 print(error!.localizedDescription)
             } else {
+                
                 if let data = data {
-                    if let stringData = String(data: data, encoding: String.Encoding.utf8) {
-                        print(stringData) //JSONSerialization
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+                        let stream = Stream(withDictionary: json)
+                        completion(stream)
+                    } catch let _ as NSError {
+                        
                     }
+//                    if let stringData = String(data: data, encoding: String.Encoding.utf8) {
+//                        let stream = 
+//                        print(stringData) //JSONSerialization
+//                    }
                 }
             }
         }) { (data, response, error) in
