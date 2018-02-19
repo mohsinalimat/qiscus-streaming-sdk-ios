@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "QiscusStreaming"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "Qiscus Video Streaming."
 
     s.description  = <<-DESC
@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://qisc.us"
   s.license      = "MIT"
   s.author       = { "ashari juang" => "asharijuang@me.com" }
-  s.platform     = :ios, "9.0"
-  s.ios.deployment_target = "9.0"
+  s.platform     = :ios, "10.0"
+  s.ios.deployment_target = "10.0"
 
   s.source       = { :git => "https://github.com/qiscus/qiscus-streaming-sdk-ios.git", :tag => "#{s.version}" }
 
