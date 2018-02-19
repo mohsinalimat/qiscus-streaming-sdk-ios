@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l2q-Ax-IkI">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l2q-Ax-IkI">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,28 +15,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-yf-XnF">
-                                <rect key="frame" x="112.5" y="318.5" width="150" height="30"/>
+                                <rect key="frame" x="84" y="166" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.81960784310000001" green="0.26274509800000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="6P5-ro-4H0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6P5-ro-4H0"/>
                                 </constraints>
-                                <state key="normal" title="Sample Stream">
+                                <state key="normal" title="Request Stream URL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-ia-OhM">
-                                <rect key="frame" x="20" y="272" width="335" height="30"/>
+                                <rect key="frame" x="20" y="128" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPy-QF-O0P">
-                                <rect key="frame" x="112" y="363.5" width="150.5" height="30"/>
-                                <state key="normal" title="Let's Stream">
+                                <rect key="frame" x="115" y="204" width="87" height="30"/>
+                                <state key="normal" title="Start Stream">
                                     <color key="titleColor" red="0.81960784310000001" green="0.26274509800000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -44,13 +44,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8nw-ia-OhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3yj-VO-38E"/>
-                            <constraint firstItem="z6f-yf-XnF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6PI-EM-v3R"/>
-                            <constraint firstItem="z6f-yf-XnF" firstAttribute="top" secondItem="8nw-ia-OhM" secondAttribute="bottom" constant="16.5" id="MT5-b0-tFE"/>
-                            <constraint firstItem="KPy-QF-O0P" firstAttribute="leading" secondItem="z6f-yf-XnF" secondAttribute="leading" id="QeU-Bx-blD"/>
-                            <constraint firstItem="KPy-QF-O0P" firstAttribute="trailing" secondItem="z6f-yf-XnF" secondAttribute="trailing" id="XKp-jA-ziA"/>
-                            <constraint firstItem="KPy-QF-O0P" firstAttribute="top" secondItem="z6f-yf-XnF" secondAttribute="bottom" constant="15" id="blc-KW-8Gc"/>
+                            <constraint firstAttribute="trailing" secondItem="KPy-QF-O0P" secondAttribute="trailing" constant="118" id="4ld-s9-hVP"/>
+                            <constraint firstItem="z6f-yf-XnF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-103" id="6PI-EM-v3R"/>
+                            <constraint firstItem="z6f-yf-XnF" firstAttribute="top" secondItem="8nw-ia-OhM" secondAttribute="bottom" constant="8" id="MT5-b0-tFE"/>
+                            <constraint firstItem="KPy-QF-O0P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z6f-yf-XnF" secondAttribute="leading" id="QeU-Bx-blD"/>
+                            <constraint firstItem="KPy-QF-O0P" firstAttribute="top" secondItem="z6f-yf-XnF" secondAttribute="bottom" constant="8" id="blc-KW-8Gc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8nw-ia-OhM" secondAttribute="trailing" constant="20" id="mKb-FM-Jmb"/>
-                            <constraint firstItem="z6f-yf-XnF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q9S-fN-x8b"/>
+                            <constraint firstItem="z6f-yf-XnF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="q9S-fN-x8b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,7 +71,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l2q-Ax-IkI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HHG-0e-Pp5">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

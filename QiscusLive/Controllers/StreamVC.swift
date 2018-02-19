@@ -19,6 +19,7 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBOutlet weak var buttonLive: UIButton!
     //MARK: - Getters and Setters
     
     var streamUrl : String = ""
@@ -88,19 +89,27 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         session.delegate = self
         session.preView = self.view
         
+        session.captureDevicePosition = AVCaptureDevicePosition.back
+        startLiveButton.isSelected = true
+        let stream = LFLiveStreamInfo()
+        stream.url = streamUrl
+        session.startLive(stream)
+        
         self.requestAccessForVideo()
         self.requestAccessForAudio()
         self.view.backgroundColor = UIColor.clear
         self.view.addSubview(containerView)
         containerView.addSubview(stateLabel)
         containerView.addSubview(closeButton)
-        containerView.addSubview(beautyButton)
+//        containerView.addSubview(beautyButton)
         containerView.addSubview(cameraButton)
-        containerView.addSubview(startLiveButton)
+//        containerView.addSubview(startLiveButton)
+        buttonLive.layer.cornerRadius    = buttonLive.frame.height/2
+        buttonLive.clipsToBounds         = true
         
         cameraButton.addTarget(self, action: #selector(didTappedCameraButton(_:)), for:.touchUpInside)
         beautyButton.addTarget(self, action: #selector(didTappedBeautyButton(_:)), for: .touchUpInside)
-        startLiveButton.addTarget(self, action: #selector(didTappedStartLiveButton(_:)), for: .touchUpInside)
+//        startLiveButton.addTarget(self, action: #selector(didTappedStartLiveButton(_:)), for: .touchUpInside)
         closeButton.addTarget(self, action: #selector(didTappedCloseButton(_:)), for: .touchUpInside)
     }
     
@@ -184,20 +193,6 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     }
     
     //MARK: - Events
-    
-    func didTappedStartLiveButton(_ button: UIButton) -> Void {
-        startLiveButton.isSelected = !startLiveButton.isSelected;
-        if (startLiveButton.isSelected) {
-            startLiveButton.setTitle("Stop", for: UIControlState())
-            let stream = LFLiveStreamInfo()
-            stream.url = streamUrl
-            session.startLive(stream)
-        } else {
-            startLiveButton.setTitle("Live", for: UIControlState())
-            session.stopLive()
-        }
-    }
-    
     func didTappedBeautyButton(_ button: UIButton) -> Void {
     session.beautyFace = !session.beautyFace;
     beautyButton.isSelected = !session.beautyFace
@@ -210,5 +205,18 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     
     func didTappedCloseButton(_ button: UIButton) -> Void  {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func clickButtonLive(_ sender: Any) {
+        buttonLive.isSelected = !buttonLive.isSelected;
+        if (buttonLive.isSelected) {
+            buttonLive.setTitle("Stop", for: UIControlState())
+            let stream = LFLiveStreamInfo()
+            stream.url = streamUrl
+            session.startLive(stream)
+        } else {
+            buttonLive.setTitle("Live", for: UIControlState())
+            session.stopLive()
+        }
     }
 }

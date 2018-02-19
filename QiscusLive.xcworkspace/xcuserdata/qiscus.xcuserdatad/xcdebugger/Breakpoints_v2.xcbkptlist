@@ -49,38 +49,6 @@
             endingLineNumber = "50"
             landmarkName = "createStreaming(title:tags:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static QiscusStreaming.StreamService.createStreaming(title: Swift.String, tags: Swift.String, completion: (Swift.Optional&lt;QiscusStreaming.Stream&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "QiscusStreaming"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qicus/iOS/qiscus-streaming-sdk-ios/QiscusLive/Services/StreamService.swift"
-                  timestampString = "532000011.183822"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "1285">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.HTTPURLResponse&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; () in static QiscusStreaming.StreamService.createStreaming(title: Swift.String, tags: Swift.String, completion: (Swift.Optional&lt;QiscusStreaming.Stream&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "QiscusStreaming"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qicus/iOS/qiscus-streaming-sdk-ios/QiscusLive/Services/StreamService.swift"
-                  timestampString = "532000011.186989"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,38 +65,6 @@
             endingLineNumber = "39"
             landmarkName = "createStreaming(title:tags:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static QiscusStreaming.StreamService.createStreaming(title: Swift.String, tags: Swift.String, completion: (Swift.Optional&lt;QiscusStreaming.Stream&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "QiscusStreaming"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qicus/iOS/qiscus-streaming-sdk-ios/QiscusLive/Services/StreamService.swift"
-                  timestampString = "532000011.192034"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1079">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.HTTPURLResponse&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; () in static QiscusStreaming.StreamService.createStreaming(title: Swift.String, tags: Swift.String, completion: (Swift.Optional&lt;QiscusStreaming.Stream&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "QiscusStreaming"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qicus/iOS/qiscus-streaming-sdk-ios/QiscusLive/Services/StreamService.swift"
-                  timestampString = "532000011.193815"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
