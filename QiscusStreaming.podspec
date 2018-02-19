@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://qisc.us"
   s.license      = "MIT"
   s.author       = { "ashari juang" => "asharijuang@me.com" }
-  s.platform     = :ios, "10.0"
-  s.ios.deployment_target = "10.0"
+  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = "8.0"
 
   s.source       = { :git => "https://github.com/qiscus/qiscus-streaming-sdk-ios.git", :tag => "#{s.version}" }
 
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.libraries = "c++", "z"
 
   s.requires_arc = true
-  s.dependency 'LFLiveKit'
-  s.dependency 'Alamofire'
-  s.dependency 'SwiftyJSON'
+  s.dependency 'LFLiveKit', '2.6'
+  s.dependency 'Alamofire', '4.5.1'
+  s.dependency 'SwiftyJSON', '3.1.4'
 end
