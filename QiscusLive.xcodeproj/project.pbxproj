@@ -312,7 +312,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/QiscusLive/QiscusLive.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/QiscusLive/QiscusLive.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -512,7 +512,7 @@
 				INFOPLIST_FILE = QiscusLive/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live.QiscusLive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscus.general;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -536,7 +536,7 @@
 				INFOPLIST_FILE = QiscusLive/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live.QiscusLive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscus.general;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -556,10 +556,10 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscus.general;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37f9b630-469f-47d0-b366-05ad4f14bee3";
-				PROVISIONING_PROFILE_SPECIFIER = QiscusDev;
+				PROVISIONING_PROFILE = "dabc5560-7a41-4830-9f2b-d168d0439b13";
+				PROVISIONING_PROFILE_SPECIFIER = "Qiscus General Dev";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -576,10 +576,10 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscus.general;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37f9b630-469f-47d0-b366-05ad4f14bee3";
-				PROVISIONING_PROFILE_SPECIFIER = QiscusDev;
+				PROVISIONING_PROFILE = "dabc5560-7a41-4830-9f2b-d168d0439b13";
+				PROVISIONING_PROFILE_SPECIFIER = "Qiscus General Dev";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
