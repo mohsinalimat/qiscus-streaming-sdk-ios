@@ -90,7 +90,8 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         session.preView = self.view
         
         session.captureDevicePosition = AVCaptureDevicePosition.back
-        startLiveButton.isSelected = true
+        buttonLive.setTitle("Stop", for: UIControlState())
+        buttonLive.isSelected = true
         let stream = LFLiveStreamInfo()
         stream.url = streamUrl
         session.startLive(stream)
@@ -205,6 +206,7 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
     
     func didTappedCloseButton(_ button: UIButton) -> Void  {
         self.dismiss(animated: true, completion: nil)
+        session.stopLive()
     }
     
     @IBAction func clickButtonLive(_ sender: Any) {
