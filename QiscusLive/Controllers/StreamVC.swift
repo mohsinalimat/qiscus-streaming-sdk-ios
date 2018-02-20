@@ -86,7 +86,7 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
 
         buttonLive.setTitle("Stop", for: .selected)
         buttonLive.setTitle("Live", for: .normal)
-        buttonLive.setTitleColor(UIColor.clear, for: .selected)
+        buttonLive.setTitleColor(UIColor.white, for: .selected)
         buttonLive.setTitleColor(UIColor.red, for: .normal)
         buttonLive.layer.cornerRadius    = buttonLive.frame.height/2
         buttonLive.clipsToBounds         = true
