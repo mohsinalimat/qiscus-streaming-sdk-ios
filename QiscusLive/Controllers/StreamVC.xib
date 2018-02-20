@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StreamVC" customModule="QiscusLive" customModuleProvider="target">
             <connections>
+                <outlet property="buttonLive" destination="XNv-gw-BEB" id="s0b-B8-BPS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,6 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNv-gw-BEB">
+                    <rect key="frame" x="172" y="616" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.92692214250000005" green="0.21890419720000001" blue="0.19287320969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="VlG-mG-Rfe"/>
+                        <constraint firstAttribute="width" constant="70" id="f87-aN-xyC"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Stop">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-Hr-5sC">
                     <rect key="frame" x="369" y="0.0" width="30" height="30"/>
                     <constraints>
@@ -41,20 +54,6 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNv-gw-BEB">
-                    <rect key="frame" x="172" y="616" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.92692214250000005" green="0.21890419720000001" blue="0.19287320969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="70" id="VlG-mG-Rfe"/>
-                        <constraint firstAttribute="width" constant="70" id="f87-aN-xyC"/>
-                    </constraints>
-                    <state key="normal" title="Stop">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="clickLive:" destination="-1" eventType="touchUpInside" id="adA-eb-vgX"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>

@@ -32,14 +32,6 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         return session!
     }()
     
-    // View
-    var containerView: UIView = {
-        let containerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        containerView.backgroundColor = UIColor.clear
-        containerView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleHeight]
-        return containerView
-    }()
-    
     // Status
     var stateLabel: UILabel = {
         let stateLabel = UILabel(frame: CGRect(x: 20, y: 20, width: 80, height: 40))
@@ -87,19 +79,22 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         
         self.requestAccessForVideo()
         self.requestAccessForAudio()
-        self.view.backgroundColor = UIColor.clear
-        self.view.addSubview(containerView)
-        containerView.addSubview(stateLabel)
-        containerView.addSubview(closeButton)
 
-        containerView.addSubview(cameraButton)
+        self.view.addSubview(stateLabel)
+        self.view.addSubview(closeButton)
+        self.view.addSubview(cameraButton)
 
-//        buttonLive.layer.cornerRadius    = buttonLive.frame.height/2
-//        buttonLive.clipsToBounds         = true
-//        buttonLive.isSelected            = true
+        buttonLive.setTitle("Stop", for: .selected)
+        buttonLive.setTitle("Live", for: .normal)
+        buttonLive.setTitleColor(UIColor.clear, for: .selected)
+        buttonLive.setTitleColor(UIColor.red, for: .normal)
+        buttonLive.layer.cornerRadius    = buttonLive.frame.height/2
+        buttonLive.clipsToBounds         = true
+        buttonLive.isSelected            = true
         cameraButton.addTarget(self, action: #selector(didTappedCameraButton(_:)), for:.touchUpInside)
         beautyButton.addTarget(self, action: #selector(didTappedBeautyButton(_:)), for: .touchUpInside)
         closeButton.addTarget(self, action: #selector(didTappedCloseButton(_:)), for: .touchUpInside)
+        buttonLive.addTarget(self, action: #selector(clickLive(_:)), for: .touchUpInside)
     }
     
     override func didReceiveMemoryWarning() {
@@ -197,16 +192,15 @@ class StreamVC: UIViewController, LFLiveSessionDelegate {
         session.stopLive()
     }
     
-    @IBAction func clickLive(_ sender: Any) {
-        print("live stream \(buttonLive.isSelected)")
+    func clickLive(_ button: UIButton) {
         buttonLive.isSelected = !buttonLive.isSelected;
         if (buttonLive.isSelected) {
-            buttonLive.setTitle("Stop", for: UIControlState())
+            buttonLive.backgroundColor  = UIColor.red
             let stream = LFLiveStreamInfo()
             stream.url = streamUrl
             session.startLive(stream)
         } else {
-            buttonLive.setTitle("Live", for: UIControlState())
+            buttonLive.backgroundColor  = UIColor.white
             session.stopLive()
         }
     }
