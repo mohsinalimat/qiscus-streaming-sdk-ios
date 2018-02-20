@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonStream: UIButton!
     @IBOutlet weak var buttonLive: UIButton!
     var client : QiscusStreaming?
+    var watchURL : String = "http://"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
             print("stream url : \(String(describing: stream?.streamUrl))")
             DispatchQueue.main.async {
                 self.urlTextField.text = stream?.streamUrl
+                self.watchURL = (stream?.watchUrl)!
             }
             
         }
@@ -47,6 +49,18 @@ class ViewController: UIViewController {
             //
             self.present(target, animated: true, completion: nil)
         })
+    }
+    
+    @IBAction func shareButtonClicked(sender: UIButton) {
+        let textToShare = "Hi, watch me in \(watchURL). \nthis video present by Qiscus Live Streaming"
+        
+        if let myWebsite = NSURL(string: watchURL) {
+            let objectsToShare = [textToShare, myWebsite] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            activityVC.popoverPresentationController?.sourceView = sender
+            self.present(activityVC, animated: true, completion: nil)
+        }
     }
 }
 
