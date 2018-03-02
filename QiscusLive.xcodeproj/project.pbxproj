@@ -556,7 +556,7 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.rtc.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "277a087a-cf0c-46aa-9c5e-7ea3a198b68f";
 				PROVISIONING_PROFILE_SPECIFIER = QiscusDev;
@@ -576,7 +576,7 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.rtc.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev.live.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "277a087a-cf0c-46aa-9c5e-7ea3a198b68f";
 				PROVISIONING_PROFILE_SPECIFIER = QiscusDev;
