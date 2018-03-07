@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         buttonStream.addTarget(self, action: #selector(self.tapSample(_:)), for: UIControlEvents.touchUpInside)
         buttonLive.addTarget(self, action: #selector(self.goStream(_:)), for: UIControlEvents.touchUpInside)
         let config      = StreamConfig()
-        config.AppId    = "a3d2QkJXQ2M1YTdrTW1PYnVJSmJiUVczTkxmS3BRc05nYnRCOHRGUw=="
+        config.AppId    = "elR1SnZGVElndUpDV2gxcDBuRFFhcGFmc3l0bFdSbENmOTlLQ1ZDTA=="
         client = QiscusStreaming(withConfig: config)
     }
 
