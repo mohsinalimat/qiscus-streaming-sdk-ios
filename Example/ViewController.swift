@@ -33,10 +33,13 @@ class ViewController: UIViewController {
     }
     func tapSample(_ sender: Any) {
         client?.createStream(title: "streaming", tags: ["email" : "juang@qiscus.co"]) { (stream) in
-            print("stream url : \(String(describing: stream?.streamUrl))")
+            
             DispatchQueue.main.async {
-                self.urlTextField.text = stream?.streamUrl
-                self.watchURL = (stream?.watchUrl)!
+                if let data = stream {
+                    print("stream url : \(String(describing: data.streamUrl))")
+                    self.urlTextField.text = data.streamUrl
+                    self.watchURL = data.watchUrl
+                }
             }
             
         }

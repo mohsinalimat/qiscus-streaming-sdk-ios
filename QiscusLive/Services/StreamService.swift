@@ -50,43 +50,14 @@ class StreamService: NSObject {
                         let stream = Stream(withDictionary: json)
                         completion(stream)
                     } catch let _ as NSError {
-                        
+                        completion(nil)
                     }
-//                    if let stringData = String(data: data, encoding: String.Encoding.utf8) {
-//                        let stream = 
-//                        print(stringData) //JSONSerialization
-//                    }
+                }else {
+                    completion(nil)
                 }
             }
         }) { (data, response, error) in
-            //
+            completion(nil)
         }
-//
-//        let headers : HTTPHeaders = [
-//            "Authorization" : "Bearer \(APPID)"
-//        ]
-//
-//        let params = [
-//            "iostags" : "example : hello",
-//            "title" : "title",
-//        ]
-//        print("params \(params), \(headers)")
-//
-//        let request = Alamofire.request(StreamEndpoint.request, method: .post, parameters: params, headers: headers).responseJSON { (response)->Void in
-//            print(response)
-//            if response.result.value != nil {
-//                if (response.response?.statusCode)! >= 300 {
-//                    completion(nil)
-//                } else {
-//                    let json    = JSON(response.result.value ?? "")
-//                    let result  = json["data"]
-//                    let data    = Stream(withJSON: result)
-//                    completion(data)
-//                }
-//            } else {
-//                completion(nil)
-//            }
-//        }
-//        print("request \(request)")
     }
 }
