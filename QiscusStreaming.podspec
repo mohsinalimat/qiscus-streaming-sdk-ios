@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "QiscusStreaming"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "Qiscus Video Streaming."
 
     s.description  = <<-DESC
